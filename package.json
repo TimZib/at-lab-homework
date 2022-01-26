@@ -1,0 +1,22 @@
+{
+  "name": "at-lab-homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:unit-testing": "mocha unit-testing-task/test-hometask.spec.js",
+    "test:wdio-jasmine": "mocha wdio-jasmine-task/test-hometask.spec.js",
+    "test:wdio-mocha": "mocha wdio-mocha-task/test-hometask.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimZib/at-lab-homework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TimZib/at-lab-homework/issues"
+  },
+  "homepage": "https://github.com/TimZib/at-lab-homework#readme"
+}
