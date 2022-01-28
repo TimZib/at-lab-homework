@@ -13,10 +13,14 @@
     "url": "git+https://github.com/TimZib/at-lab-homework.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Tsimur_Zibzibadze@epam.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/TimZib/at-lab-homework/issues"
   },
-  "homepage": "https://github.com/TimZib/at-lab-homework#readme"
+  "homepage": "https://github.com/TimZib/at-lab-homework#readme",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^9.2.0"
+  }
 }
