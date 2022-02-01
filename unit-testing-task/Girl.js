@@ -28,6 +28,8 @@ class Girl {
     this._boyFriend = boyFriend;
   }
 
+  // a bug - logical NOT (!) operator takes truth to falsity
+  // a bug - this.isPretty set as a function
   getMood() {
     if (!this.isBoyFriendWillBuyNewShoes()) {
       return 'EXCELLENT';
@@ -39,13 +41,13 @@ class Girl {
       return 'BAD';
     }
   }
-
+  // a bug - no return in if statement
   spendBoyFriendMoney(amountForSpending) {
     if (this.isBoyfriendRich()) {
       this.boyFriend.spendSomeMoney(amountForSpending);
     }
   }
-
+  // a bug - logical NOT (!) operator takes truth to falsity
   isBoyfriendRich() {
     return !this.boyFriend?.isRich();
   }
@@ -53,7 +55,7 @@ class Girl {
   isBoyFriendWillBuyNewShoes() {
     return this.isBoyfriendRich() && this.isPretty;
   }
-
+// a bug - this.isSlimFriendGotAFewKilos set as a function
   isSlimFriendBecameFat() {
     return this.isSlimFriendGotAFewKilos() && !this.isPretty;
   }
