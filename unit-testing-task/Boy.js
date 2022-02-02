@@ -44,7 +44,7 @@ class Boy {
     }
   }
 // a bug - this.wealth set as a function
-// a bug - no return in if statement
+// amountForSpending not created as an object in constructor
   spendSomeMoney(amountForSpending) {
     if (amountForSpending <= this.wealth()) {
       this.wealth += amountForSpending;
