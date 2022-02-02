@@ -8,7 +8,7 @@ let coupon = 'LuckyUser';
 let comment = 'some comment';
 let email = 'zibzik@mail.ru';
 let address = 'vasnetsova 34';
-let coupomMessage = 'Success: Your coupon discount has been applied!';
+let couponMessage = 'Success: Your coupon discount has been applied!';
 let messageSuccessful = 'Your order has been placed!';
 
 describe('LuckyUser coupon', () => {
@@ -32,13 +32,13 @@ describe('LuckyUser coupon', () => {
 
   it('should display message', async () => {
     const messageCoupon = await $('//*[@id="checkout-cart"]/div[1]');
-    expect(messageCoupon).toHaveTextContaining(coupomMessage);
+    expect(messageCoupon).toHaveTextContaining(couponMessage);
   });
 
   it('should applied 15% discount', async () => {
     const total = await $('//*[@id="content"]/form//tbody//td[6]').getText();
     const subTotal = await $('//*[@id="content"]/div[2]/div//td[2]').getText();
-    const totalWithoutDiscount = total.substr(1) * 0.75
+    const totalWithoutDiscount = total.substr(1) * 0.75;
     expect(totalWithoutDiscount * 0.75).toHaveTextContaining(subTotal);
   });
 
@@ -66,9 +66,9 @@ describe('LuckyUser coupon', () => {
   it('should order in history of current user', async () => {
     await $('//*[@id="content"]//a[2]').click();
     await $('//*[@id="content"]//tr[1]/td[7]/a').click();
-    const oderProduct = await $(
+    const orderProduct = await $(
       '//*[@id="content"]/div[1]/table/tbody/tr/td[1]'
     );
-    expect(oderProduct).toHaveTextContaining(product);
+    expect(orderProduct).toHaveTextContaining(product);
   });
 });
