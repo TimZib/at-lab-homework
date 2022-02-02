@@ -49,6 +49,8 @@ describe('Apple Cinema', async () => {
     const vat = await $('//*[@id="content"]/div[2]//tr[2]/td[2]').getText();
     const total = await $('//*[@id="content"]/div[2]//tr[3]/td[2]').getText();
 
-    expect(`${total} - ${vat}`).toEqual(subTotal);
+    const totalWithoutVat = total.substr(1) - vat.substr(1);
+
+    expect(totalWithoutVat).toHaveValueContaining(subTotal);
   });
 });
