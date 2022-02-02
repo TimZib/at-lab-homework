@@ -38,7 +38,8 @@ describe('LuckyUser coupon', () => {
   it('should applied 15% discount', async () => {
     const total = await $('//*[@id="content"]/form//tbody//td[6]').getText();
     const subTotal = await $('//*[@id="content"]/div[2]/div//td[2]').getText();
-    expect(total * 0.75).toEqual(subTotal);
+    const totalWithoutDiscount = total.substr(1) * 0.75
+    expect(totalWithoutDiscount * 0.75).toHaveTextContaining(subTotal);
   });
 
   it('should display message of order placing', async () => {
