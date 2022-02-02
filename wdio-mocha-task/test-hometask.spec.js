@@ -28,12 +28,12 @@ describe('Apple Cinema', async () => {
       '//*[@id="content"]//div/table//td[2]/small[1]'
     );
     await expect(mediaumRadio).toHaveTextContaining(medium);
-    const CheckboxTwoOption = await $(
+    const checkboxTwoOption = await $(
       '//*[@id="content"]//table//td[2]/small[2]'
     );
-    await expect(CheckboxTwoOption).toHaveTextContaining(checkboxTwo);
-    const CheckboxFourOption = await $('//*[@id="content"]//tbody//small[3]');
-    await expect(CheckboxFourOption).toHaveTextContaining(checkboxFour);
+    await expect(checkboxTwoOption).toHaveTextContaining(checkboxTwo);
+    const checkboxFourOption = await $('//*[@id="content"]//tbody//small[3]');
+    await expect(checkboxFourOption).toHaveTextContaining(checkboxFour);
     const textShort = await $('//*[@id="content"]/form//small[4]');
     await expect(textShort).toHaveTextContaining(shortText);
     const textLong = await $('//*[@id="content"]/form//small[6]');
