@@ -43,7 +43,8 @@ class Boy {
       return 'BAD';
     }
   }
-
+// a bug - this.wealth set as a function
+// amountForSpending must subtract from this.wealth not add
   spendSomeMoney(amountForSpending) {
     if (amountForSpending <= this.wealth()) {
       this.wealth += amountForSpending;
@@ -53,7 +54,8 @@ class Boy {
       );
     }
   }
-
+// a bug - all month should be transformed to toUpperCase() method
+// a bug - logical AND (&&) should be changed to logical OR (||)
   isSummerMonth() {
     return (
       this.birthdayMonth.toLowerCase() === 'JUNE' ||
