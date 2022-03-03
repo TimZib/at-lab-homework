@@ -24,10 +24,10 @@ describe('Apple Cinema', async () => {
   });
 
   it('should applied selected options', async () => {
-    const mediaumRadio = await $(
+    const mediumRadio = await $(
       '//*[@id="content"]//div/table//td[2]/small[1]'
     );
-    await expect(mediaumRadio).toHaveTextContaining(medium);
+    await expect(mediumRadio).toHaveTextContaining(medium);
     const checkboxTwoOption = await $(
       '//*[@id="content"]//table//td[2]/small[2]'
     );

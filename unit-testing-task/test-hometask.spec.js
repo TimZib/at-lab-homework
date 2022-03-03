@@ -76,12 +76,12 @@ describe('Girl', () => {
     girl.isPretty = true;
     expect(girl.getMood()).to.deep.equal('GOOD');
 
-    const neutralMoodgirl = new Girl(2);
-    expect(neutralMoodgirl.getMood()).to.deep.equal('NEUTRAL');
+    const neutralMoodGirl = new Girl(2);
+    expect(neutralMoodGirl.getMood()).to.deep.equal('NEUTRAL');
 
-    const badMoodgirl = new Girl();
+    const badMoodGirl = new Girl();
     girl.isPretty = false;
-    expect(badMoodgirl.getMood()).to.deep.equal('BAD');
+    expect(badMoodGirl.getMood()).to.deep.equal('BAD');
   });
 
   it('should proper spendBoyFriendMoney implementation', () => {

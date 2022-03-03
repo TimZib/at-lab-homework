@@ -7,7 +7,7 @@ let firstName = 'Tsim';
 let coupon = 'LuckyUser';
 let comment = 'some comment';
 let email = 'zibzik@mail.ru';
-let address = 'vasnetsova 34';
+let address = 'Vasnetsova 34';
 let couponMessage = 'Success: Your coupon discount has been applied!';
 let messageSuccessful = 'Your order has been placed!';
 

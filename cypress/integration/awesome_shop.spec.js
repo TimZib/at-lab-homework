@@ -3,7 +3,7 @@ Cypress.Commands.add('typeLogin', (user) => {
   cy.get('#input-password').type(user.password);
 });
 
-Cypress.Commands.add('typeAdress', (user) => {
+Cypress.Commands.add('typeAddress', (user) => {
   cy.get('#input-payment-firstname').type(user.firstname);
   cy.get('#input-payment-lastname').type(user.lastname);
   cy.get('#input-payment-address-1').type(user.address);
@@ -72,7 +72,7 @@ describe('do the shopping', () => {
       });
     cy.get('a[class="btn btn-primary"]').click();
     cy.get('input[value="new"]').click();
-    cy.typeAdress({
+    cy.typeAddress({
       firstname: 'Tsimur',
       lastname: 'Zibzibadze',
       address: 'Vasnetsova-34',
